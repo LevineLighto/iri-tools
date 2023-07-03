@@ -12,7 +12,7 @@ class ConverterController extends Controller
 {
     public function handle(Request $request) {
         $validator = Validator::make($request->all(), [
-            'file'      => 'file|mimes:png,jpeg,jpg',
+            'file'      => 'file|mimes:png,jpeg,jpg,webp',
             'format'    => 'required|in:png,jpeg,jpg,webp',
             'height'    => 'nullable|numeric',
             'width'     => 'nullable|numeric',
