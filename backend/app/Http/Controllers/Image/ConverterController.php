@@ -59,6 +59,14 @@ class ConverterController extends Controller
 
         $imagick->setImageFormat($request->input('format'));
 
+        $origin = $request->header('origin');
+        $support= config('cors.supports_credentials') ? 'true' : 'false';
+
+        if(in_array($origin, config('cors.allowed_origins'))) {
+            header("Access-Control-Allow-Credentials: {$support}");
+            header("Access-Control-Allow-Origin: {$origin}");
+        }
+
         header("Content-type: image/{$imagick->getImageFormat()}");
         echo $imagick->getImageBlob();
         return;
