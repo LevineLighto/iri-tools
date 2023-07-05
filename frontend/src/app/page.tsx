@@ -13,7 +13,7 @@ export default function Home() {
                     <Headings
                         level={'title'}
                     >
-                        IriTools
+                        { process.env.NEXT_PUBLIC_NAME }
                     </Headings>
                     <p>
                         Iri's tool collection

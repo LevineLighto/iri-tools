@@ -33,7 +33,7 @@ export const ToolNavbar : FC = () => (
                 className="me-2"
             />
             <div className={`${Classes.brand.name} ${Montserrat.className}`}>
-                IriTools
+                { process.env.NEXT_PUBLIC_NAME }
             </div>
         </Link>
         <ToolNavigation/>

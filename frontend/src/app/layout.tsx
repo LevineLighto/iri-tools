@@ -7,7 +7,7 @@ config.autoAddCss = false
 
 
 export const metadata = {
-    title: 'IriTools',
+    title: process.env.NEXT_PUBLIC_NAME,
     description: 'Tool Collection',
 }
 
