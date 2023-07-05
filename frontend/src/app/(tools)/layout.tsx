@@ -4,7 +4,7 @@ import { PortraitPaddings } from "@/config/classes/Paddings";
 import { ToolNavbar } from "@/layouts/tools";
 import { FC, ReactNode } from "react";
 
-const ToolLayout : FC<{children : ReactNode, [key: string] : any}> = ({
+const ToolLayout : FC<{children : ReactNode}> = ({
     children
 }) => {
     return (

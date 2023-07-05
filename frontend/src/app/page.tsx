@@ -16,7 +16,7 @@ export default function Home() {
                         { process.env.NEXT_PUBLIC_NAME }
                     </Headings>
                     <p>
-                        Iri's tool collection
+                        Iri{"'"}s tool collection
                     </p>
                 </div>
                     

@@ -33,7 +33,7 @@ export const Droppable : FC<Props> = ({
         }
 
         setInside(true);
-    }, [onDragOver, timeout]);
+    }, [onDragOver, timeout, inside]);
 
     const handleDrop = useCallback<DragDropHandler>(event => {
         event.preventDefault();

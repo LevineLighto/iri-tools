@@ -69,7 +69,7 @@ export const FileDropper : FC<Props> = ({
 
             setFiles(modified);
         }
-    }, [files]);
+    }, [files, onRemove]);
     
     const handleSelect = useCallback<ChangeHandler>(event => {
         const input = event.target;
@@ -82,6 +82,10 @@ export const FileDropper : FC<Props> = ({
         for (let index = 0; index < inputted.length; index++) {
             const file = inputted[index];
             added.push(file);
+        }
+
+        if(typeof onAdd == 'function') {
+            onAdd(added);
         }
 
         setFiles([...files, ...added]);

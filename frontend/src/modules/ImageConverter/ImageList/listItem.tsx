@@ -91,7 +91,7 @@ export const ListItem : FC<Props> = ({
         formdata.current = new FormData(form);
 
         setUploading(true);
-    }, [file, uploading, queueFull, num, dispatch]);
+    }, [uploading, queueFull, num, dispatch]);
 
     const handleChange = useCallback<InputHandler>(extension => {
         setExt(extension as string);
